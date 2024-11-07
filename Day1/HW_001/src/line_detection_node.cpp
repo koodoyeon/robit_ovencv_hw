@@ -11,7 +11,6 @@ public:
         // 이미지 파일 경로 설정
         string image_path = "/home/dy/colcon_ws/src/line_detection/include/line_detection/image.png";
 
-        // 이미지를 불러옵니다.
         Mat img = imread(image_path);
         if (img.empty()) {
             RCLCPP_ERROR(this->get_logger(), "이미지를 불러올 수 없습니다: %s", image_path.c_str());
@@ -38,7 +37,7 @@ public:
         imshow("Original Image", img);                      // 원본 이미지
         imshow("Binary Image (No Blur)", binary_img_no_blur); // 블러 미적용 필터링 이미지
         imshow("Binary Image (Blur)", binary_img_blur); // 블러 적용 필터링 이미지
-        waitKey(0);  // 키 입력이 있을 때까지 창을 유지합니다.
+        waitKey(0);  // 키 입력이 있을 때까지 창을 유지
     }
 };
 

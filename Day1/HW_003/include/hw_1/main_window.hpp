@@ -35,7 +35,7 @@ private:
   void closeEvent(QCloseEvent* event);
 
 private Q_SLOTS:
-  void updateRobotArm(); // 로봇 팔 업데이트 함수 추가
+  void updateRobotArm();
 };
 
 #endif  // hw_1_MAIN_WINDOW_H

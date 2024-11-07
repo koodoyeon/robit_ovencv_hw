@@ -8,9 +8,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
   this->setWindowIcon(icon);
 
   qnode = new QNode();
-  timer = new QTimer(this);
-
-  // 타이머를 16ms(약 60fps) 간격으로 설정하여 업데이트
+  timer = new QTimer(this)
   connect(timer, &QTimer::timeout, this, &MainWindow::updateRobotArm);
   timer->start(16);
 
