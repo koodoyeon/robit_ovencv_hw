@@ -29,7 +29,7 @@ qt5_add_resources(QT_RESOURCE_HPP ${PRO_RESOURCE_DIR})
 include_directories(
     include/
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${OpenCV_INCLUDE_DIRS}  # OpenCV 헤더 파일 경로 추가
+    ${OpenCV_INCLUDE_DIRS}  
 )
 
 add_executable(${PROJECT_NAME}
@@ -41,9 +41,9 @@ add_executable(${PROJECT_NAME}
     ${QT_UI_HPP}
 )
 
-ament_target_dependencies(${PROJECT_NAME} rclcpp Boost OpenCV)  # OpenCV 의존성 추가
+ament_target_dependencies(${PROJECT_NAME} rclcpp Boost OpenCV)  
 
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Network ${OpenCV_LIBS})  # OpenCV 라이브러리 추가
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::Network ${OpenCV_LIBS})  
 
 install(TARGETS ${PROJECT_NAME}
     DESTINATION lib/${PROJECT_NAME}

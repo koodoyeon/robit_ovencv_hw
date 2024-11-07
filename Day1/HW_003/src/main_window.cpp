@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
   this->setWindowIcon(icon);
 
   qnode = new QNode();
-  timer = new QTimer(this)
+  timer = new QTimer(this);
   connect(timer, &QTimer::timeout, this, &MainWindow::updateRobotArm);
   timer->start(16);
 
